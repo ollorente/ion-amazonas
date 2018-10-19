@@ -6,12 +6,12 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { DevelopmentPage } from '../page/development/development';
-import { AboutPage } from '../page/about/about';
-import { HelpPage } from '../page/help/help';
-import { LoginPage } from '../page/login/login';
-import { LogupPage } from '../page/logup/logup';
-import { PrivacyPage } from '../page/privacy/privacy';
+import { DevelopmentPage } from '../pages/development/development';
+import { AboutPage } from '../pages/about/about';
+import { HelpPage } from '../pages/help/help';
+import { LoginPage } from '../pages/login/login';
+import { LogupPage } from '../pages/logup/logup';
+import { PrivacyPage } from '../pages/privacy/privacy';
 
 @NgModule({
   declarations: [
