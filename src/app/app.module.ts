@@ -4,6 +4,8 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { DevelopmentPage } from '../pages/development/development';
@@ -12,6 +14,7 @@ import { HelpPage } from '../pages/help/help';
 import { LoginPage } from '../pages/login/login';
 import { LogupPage } from '../pages/logup/logup';
 import { PrivacyPage } from '../pages/privacy/privacy';
+import { UserServiceProvider } from '../providers/user-service/user-service';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,7 @@ import { PrivacyPage } from '../pages/privacy/privacy';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -42,7 +46,8 @@ import { PrivacyPage } from '../pages/privacy/privacy';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    UserServiceProvider
   ]
 })
 export class AppModule {}
